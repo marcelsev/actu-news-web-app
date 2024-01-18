@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {ModalController} from "@ionic/angular";
+import {PostComponent} from "../post/post.component";
 
 @Component({
   selector: 'app-tab1',
@@ -6,7 +8,19 @@ import { Component } from '@angular/core';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
- title : String = "Actunews";
-  constructor() {}
+
+  constructor(private modalCtrl: ModalController) {}
+
+  title: string = 'Actunews';
+
+  /**
+   * Permet d'afficher la modal de l'article
+   */
+  async displayPost() {
+    const modal = await this.modalCtrl.create({
+      component: PostComponent,
+    });
+    await modal.present();
+  }
 
 }

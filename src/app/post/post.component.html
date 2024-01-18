@@ -1,3 +1,17 @@
-<p>
-  post works!
-</p>
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-icon  (click)="dismissModal()" slot ="end" class="close" name="close-circle-outline"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+
+  <h1>Titre</h1>
+  <p><span>DATE</span> <span>AUTEUR</span></p>
+
+  <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+
+  <div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi qui, quisquam. A inventore magnam maxime porro repellat. Consectetur, deleniti exercitationem illum impedit, inventore iure laboriosam magni, necessitatibus obcaecati officia quia.</p>
+  </div>
+
+</ion-content>
